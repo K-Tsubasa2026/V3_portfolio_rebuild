@@ -116,8 +116,38 @@ body{
     visibility: visible;
 }
 
+.shortcut-area{
+    display: flex;
+    align-items: center; /* 横 */
+    justify-content: center; /* 縦 */
+    min-height: 100px;
+}
+
 .shortcut{
         border:1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    cursor: pointer;
+    width:150px;
+    border-radius: 10px;
+    
+}
+
+.shortcut-text{
+    color:#fff;
+    font-size: 13px;
+}
+
+.shortcut::after{
+    opacity: 1;
+    visibility: visible;
+    background-color: #aba8a8;
+
+}
+
+.plus-icon{
+    width: 100px;
 }
 
 .shortcut-popup{
