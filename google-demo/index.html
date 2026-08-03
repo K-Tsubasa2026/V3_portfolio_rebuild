@@ -16,29 +16,32 @@
         <p>※これは学習用に作成したUI模写のデモページです。実際のGoogleとは一切関係がありません。</p>
     </div>
 
-    <div class="title">
-        <h1>Google </h1>
-        <span>(練習用模写)</span>
-    </div>
+    <!-- titleとsearch-formを縦中央にするため、親要素mainを作成 -->
+    <main class="main-content">
+        <div class="title">
+            <h1>Google </h1>
+            <span>(練習用模写)</span>
+        </div>
 
-    <form action="" class="search-form">
-        <i class="fa-solid fa-magnifying-glass icon"></i>
-        <input type="text" placeholder="学習用デモgoogleで検索またはURLを入力">
-        <button type="button" class="search-btn" data-tooltip="音声検索">
-            <i class="fa-solid fa-microphone"></i>
-        </button>
-        <button type="button" class="search-btn" data-tooltip="画像で検索">
-            <i class="fa-solid fa-camera"></i>
-        </button>
-        <button type="button" class="AIsearch-btn" data-tooltip="google検索のAIモードに質問する">
-            <i class="fa-brands fa-sistrix"></i><span>AIモード</span>
-        </button>
-        <!-- 
-        「<input>」入力欄
-        「<input placeholder="">」入力前に薄く表示される説明
-        「<button data-tooltip="">ツールチップ（マウスオンしたら出てくる注釈）」
-        -->
-    </form>
+        <form action="" class="search-form">
+            <i class="fa-solid fa-magnifying-glass icon"></i>
+            <input type="text" class="input-search" placeholder="学習用デモgoogleで検索またはURLを入力">
+            <button type="button" class="search-btn" data-tooltip="音声検索">
+                <i class="fa-solid fa-microphone"></i>
+            </button>
+            <button type="button" class="search-btn" data-tooltip="画像で検索">
+                <i class="fa-solid fa-camera"></i>
+            </button>
+            <button type="button" class="AIsearch-btn" data-tooltip="google検索のAIモードに質問する">
+                <i class="fa-brands fa-sistrix"></i><span>AIモード</span>
+            </button>
+            <!-- 
+            「<input>」入力欄
+            「<input placeholder="">」入力前に薄く表示される説明
+            「<button data-tooltip="">ツールチップ（マウスオンしたら出てくる注釈）」
+            -->
+        </form>
+    </main>
 
     <div class="shortcut">
         <i class="fa-solid fa-circle-plus"></i>

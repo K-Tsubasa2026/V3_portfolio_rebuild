@@ -1,13 +1,91 @@
 
 
 body{
-
+    background-color:#252321;
 }
 
 .demo{
     background-color: #f49c31;
+    text-align: center;
+    padding: 5px;
 }
 
 .title{
+        border:1px solid #fff;
+
     display: flex;
+    color:#fff;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.title h1{
+        border:1px solid #fff;
+
+    font-size:90px;
+}
+
+.title span{
+        border:1px solid #fff;
+
+    font-size:20px;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column; /* タイトルとフォームを縦方向にする */
+    align-items: center; /* 横方向 */
+    justify-content: center; /* 縦方向 */
+}
+
+.search-form{
+    display: flex;
+    align-items: center;
+
+    width:600px;
+    height: 60px;
+
+    background-color: #c5b1b1;
+    border-radius: 100px;
+
+    padding:10px 14px;
+}
+
+.input-search{
+    /*input標準ブラウザ機能(枠線や、背景色などの白い箱)の削除*/
+    flex:1; /* アイコンやボタン以外の余った横幅を、入力欄が使用 */
+    background-color: transparent; /* 背景透明 */
+    border:none;
+    outline:none; /* クリックしたときに表示される標準の外枠を消す */
+}
+
+.search-btn{
+    /*button標準ブラウザ機能(枠線や、背景色などの白い箱)の削除*/
+    background-color: transparent; /* 背景透明 */
+    border:none;
+    outline:none; /* クリックしたときに表示される標準の外枠を消す */
+    cursor: pointer;
+    padding: 5px;
+}
+
+.AIsearch-btn{
+    background-color: #e3dfdf;
+    border:none;
+    cursor: pointer;
+    border-radius: 999px;
+    padding: 5px;
+}
+
+
+.shortcut{
+        border:1px solid #fff;
+}
+
+.shortcut-popup{
+        border:1px solid #fff;
+}
+
+.shortcut-label{
+        border:1px solid #fff;
 }
