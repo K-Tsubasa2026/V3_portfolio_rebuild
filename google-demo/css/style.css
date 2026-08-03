@@ -50,6 +50,8 @@ body{
     border-radius: 100px;
 
     padding:10px 14px;
+    gap:15px;
+
 }
 
 .input-search{
@@ -67,6 +69,8 @@ body{
     outline:none; /* クリックしたときに表示される標準の外枠を消す */
     cursor: pointer;
     padding: 5px;
+
+    position: relative;
 }
 
 .AIsearch-btn{
@@ -75,8 +79,42 @@ body{
     cursor: pointer;
     border-radius: 999px;
     padding: 5px;
+
+    position: relative;
 }
 
+.search-btn::after,
+.AIsearch-btn::after{
+    content: attr(data-tooltip);
+    position: absolute;
+
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    white-space: nowrap;
+    padding: 5px 8px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 3px;
+
+    font-size: 12px;
+    white-space: nowrap;
+
+    /* マウスを乗せる前は非表示 */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 0.2s;
+}
+
+/* マウスを乗せたときだけ表示 */
+.search-btn:hover::after,
+.AIsearch-btn:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
 
 .shortcut{
         border:1px solid #fff;
