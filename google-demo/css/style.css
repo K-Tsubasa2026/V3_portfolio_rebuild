@@ -116,6 +116,7 @@ body{
     visibility: visible;
 }
 
+/* ショートカットを配置する範囲 */
 .shortcut-area{
     display: flex;
     align-items: center; /* 横 */
@@ -123,32 +124,80 @@ body{
     min-height: 100px;
 }
 
+/* ショートカット本体 */
+
 .shortcut{
         border:1px solid #fff;
     display: flex;
     flex-direction: column;
+    align-items: center; /* 横 */
+    justify-content: center; /* 縦 */
+
     padding: 20px;
     cursor: pointer;
     width:150px;
     border-radius: 10px;
     
+     /* 通常時は背景を透明にする */
+    background-color: transparent;
+    transition: background-color 0.2s;
 }
 
-.shortcut-text{
-    color:#fff;
-    font-size: 13px;
-}
-
-.shortcut::after{
-    opacity: 1;
-    visibility: visible;
-    background-color: #aba8a8;
-
+/* マウスを乗せたときの背景 */
+.shortcut:hover {
+    background-color: rgb(99, 98, 98);
 }
 
 .plus-icon{
-    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    color: #fff;
 }
+
+/* ショートカットの文字 */
+.shortcut-text {
+    color: #ffffff;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* ツールチップ */
+.shortcut::after {
+    content: attr(data-tooltip);
+
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 10px);
+    transform: translateY(-50%);
+
+    padding: 6px 10px;
+    border: 1px solid #777777;
+    background-color: #333333;
+    color: #ffffff;
+
+    font-size: 13px;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 0.2s;
+}
+
+/* マウスを乗せたときにツールチップを表示 */
+.shortcut:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
 
 .shortcut-popup{
         border:1px solid #fff;
