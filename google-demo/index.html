@@ -45,7 +45,7 @@
 
     <!-- 縦中央に配置するため、親要素「"shortcut-area"」を追加 -->
     <div class="shortcut-area">
-        <div id="shortcut" class="shortcut" data-tooltip="ショートカットを追加">
+        <div id="shortcut-btn" class="shortcut" data-tooltip="ショートカットを追加">
             <i class="fa-solid fa-circle-plus plus-icon"></i>
             <span class="shortcut-text">ショートカット...</span>
         </div>
@@ -53,17 +53,18 @@
 
     <div id="shortcut-popup" class="shortcut-popup">
         <h2>ショートカットを追加</h2>
-        <label class="shortcut-label" for="name-label">名前</label>
-        <input type="text" id="name-label">
+        <label class="shortcut-label" for="name-input">名前</label>
+        <input type="text" id="name-input">
 
-        <label class="shortcut-label" for="url-label">URL</label>
-        <input type="url" id="url-label">
+        <label class="shortcut-label" for="url-input">URL</label>
+        <input type="url" id="url-input">
         <!-- 
         「<label for="">,<input id="">」同じ内容を書くと紐付けできる（文字(label)をクリックすると、ボタンが押されたとinputが認識する）
         -->
-        <button type="button" class="cancel-btn">キャンセル</button>
-        <button type="button" class="done-btn">完了</button>
+        <button id="cancel-btn" type="button" class="cancel-btn">キャンセル</button>
+        <button id="done-btn" type="button" class="done-btn" disabled>完了</button>
     </div>
 
+<script src="js/main.js"></script>
 </body>
 </html>
