@@ -45,13 +45,13 @@
 
     <!-- 縦中央に配置するため、親要素「"shortcut-area"」を追加 -->
     <div class="shortcut-area">
-        <div class="shortcut" data-tooltip="ショートカットを追加">
+        <div id="shortcut" class="shortcut" data-tooltip="ショートカットを追加">
             <i class="fa-solid fa-circle-plus plus-icon"></i>
             <span class="shortcut-text">ショートカット...</span>
         </div>
     </div>
 
-    <div class="shortcut-popup">
+    <div id="shortcut-popup" class="shortcut-popup">
         <h2>ショートカットを追加</h2>
         <label class="shortcut-label" for="name-label">名前</label>
         <input type="text" id="name-label">
