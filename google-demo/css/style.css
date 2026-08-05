@@ -73,7 +73,7 @@ body{
     position: relative;
 }
 
-.AIsearch-btn{
+.ai-search-btn{
     background-color: #e3dfdf;
     border:none;
     cursor: pointer;
@@ -84,7 +84,7 @@ body{
 }
 
 .search-btn::after,
-.AIsearch-btn::after{
+.ai-search-btn::after{
     content: attr(data-tooltip);
     position: absolute;
 
@@ -115,10 +115,9 @@ body{
     visibility: visible;
 }
 
-.AIsearch-btn:hover::after {
+.ai-search-btn:hover::after {
     opacity: 1;
     visibility: visible;
-    border-color: ;
 }
 
 /* ショートカットを配置する範囲 */

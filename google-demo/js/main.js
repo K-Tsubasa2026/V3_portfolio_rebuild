@@ -1,3 +1,7 @@
+// 検索フォームのボタン操作
+const searchForm = document.getElementById('search-form');
+const aiSearchBtn = document.getElementById('ai-search-btn');
+
 // ショートカット　ポップアップのボタン操作
 const shortcutBtn = document.getElementById('shortcut-btn');
 const shortcutPopup = document.getElementById('shortcut-popup');
@@ -13,6 +17,16 @@ const urlInput = document.getElementById('url-input');
 // console.log(doneBtn);
 // console.log(nameInput);
 // console.log(urlInput);
+
+// 404へ移行
+searchForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    window.location.href = '404.html';
+});
+
+aiSearchBtn.addEventListener('click', () => {
+    window.location.href = '404.html';
+});
 
 
 // ポップアップを開く
