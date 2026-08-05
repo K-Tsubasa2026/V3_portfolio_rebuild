@@ -28,12 +28,23 @@ function closeModal(){
     doneBtn.disabled = true;
 }
 
+// 入力内容を確認して完了ボタンの状態を切り替える
+function updateDoneButton() {
+    const hasName = nameInput.value.trim() !== '';
+    const hasUrl = urlInput.value.trim() !== '';
+
+    if (hasName && hasUrl) {
+        doneBtn.disabled = false;
+    } else {
+        doneBtn.disabled = true;
+    }
+}
+
 // クリック時の動作
     shortcutBtn.addEventListener('click',openModal);
     cancelBtn.addEventListener('click',closeModal);
     doneBtn.addEventListener('click',closeModal);
 
-// 入力欄の値が空かどうかをチェックして、Doneボタンの有効/無効を切り替える
-    function updateDoneButton() {
-    doneBtn.disabled = nameInput.value.trim() === '' || urlInput.value.trim() === '';
-}
+// 入力するたびにボタンの状態を確認
+    nameInput.addEventListener('input', updateDoneButton);
+    urlInput.addEventListener('input', updateDoneButton);
