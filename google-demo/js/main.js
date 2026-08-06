@@ -1,5 +1,7 @@
 // 検索フォームのボタン操作
 const searchForm = document.getElementById('search-form');
+const voiceSearchBtn = document.getElementById('voice-search-btn');
+const imageSearchBtn = document.getElementById('image-search-btn');
 const aiSearchBtn = document.getElementById('ai-search-btn');
 
 // ショートカット　ポップアップのボタン操作
@@ -23,6 +25,15 @@ searchForm.addEventListener('submit', (event) => {
     event.preventDefault();
     window.location.href = '404.html';
 });
+
+voiceSearchBtn.addEventListener('click', () => {
+    window.location.href = '404.html';
+});
+
+imageSearchBtn.addEventListener('click', () => {
+    window.location.href = '404.html';
+});
+
 
 aiSearchBtn.addEventListener('click', () => {
     window.location.href = '404.html';

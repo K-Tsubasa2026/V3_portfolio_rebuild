@@ -26,10 +26,10 @@
         <form action="" id="search-form" class="search-form">
             <i class="fa-solid fa-magnifying-glass icon"></i>
             <input type="text" class="input-search" placeholder="学習用デモgoogleで検索またはURLを入力">
-            <button type="button" class="search-btn" data-tooltip="音声検索">
+            <button type="button" id="voice-search-btn" class="search-btn" data-tooltip="音声検索">
                 <i class="fa-solid fa-microphone"></i>
             </button>
-            <button type="button" class="search-btn" data-tooltip="画像で検索">
+            <button type="button" id="image-search-btn" class="search-btn" data-tooltip="画像で検索">
                 <i class="fa-solid fa-camera"></i>
             </button>
             <button type="button" id="ai-search-btn" class="ai-search-btn" data-tooltip="google検索のAIモードに質問する">
@@ -56,12 +56,12 @@
         <div class="shortcut-form">
             <div class="shortcut-field">
                 <label class="shortcut-label" for="name-input">名前</label>
-                <input type="text" id="name-input" class="input">
+                <input type="text" id="name-input">
             </div>
 
             <div class="shortcut-field">
                 <label class="shortcut-label" for="url-input">URL</label>
-                <input type="url" id="url-input" class="input">
+                <input type="url" id="url-input">
             </div>
         </div>
         <!-- 
