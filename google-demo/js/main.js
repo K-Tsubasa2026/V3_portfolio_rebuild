@@ -12,6 +12,9 @@ const doneBtn = document.getElementById('done-btn');
 const nameInput = document.getElementById('name-input');
 const urlInput = document.getElementById('url-input');
 
+// モーダルオーバーレイの取得（ポップアップ表示時背景暗くする）
+const modalOverlay = document.getElementById('modal-overlay');
+
 
 // console.log(shortcutBtn);
 // console.log(shortcutPopup);
@@ -43,11 +46,13 @@ aiSearchBtn.addEventListener('click', () => {
 // ポップアップを開く
 function openModal(){
     shortcutPopup.classList.add('is-open');
+    modalOverlay.classList.add('is-open');
 }
 
 // ポップアップを閉じる
 function closeModal(){
     shortcutPopup.classList.remove('is-open');
+    modalOverlay.classList.remove('is-open');
     nameInput.value = '';
     urlInput.value = '';
     doneBtn.disabled = true;

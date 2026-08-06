@@ -202,7 +202,18 @@ body{
     visibility: visible;
 }
 
+/* モーダルオーバーレイの取得（ポップアップ表示時） */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+}
 
+.modal-overlay.is-open {
+    display: block;
+}
 
 /* ショートカットポップアップ */
 .shortcut-popup{
