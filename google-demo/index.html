@@ -53,16 +53,24 @@
 
     <div id="shortcut-popup" class="shortcut-popup">
         <h2>ショートカットを追加</h2>
-        <label class="shortcut-label" for="name-input">名前</label>
-        <input type="text" id="name-input">
+        <div class="shortcut-form">
+            <div class="shortcut-field">
+                <label class="shortcut-label" for="name-input">名前</label>
+                <input type="text" id="name-input" class="input">
+            </div>
 
-        <label class="shortcut-label" for="url-input">URL</label>
-        <input type="url" id="url-input">
+            <div class="shortcut-field">
+                <label class="shortcut-label" for="url-input">URL</label>
+                <input type="url" id="url-input" class="input">
+            </div>
+        </div>
         <!-- 
         「<label for="">,<input id="">」同じ内容を書くと紐付けできる（文字(label)をクリックすると、ボタンが押されたとinputが認識する）
         -->
-        <button id="cancel-btn" type="button" class="cancel-btn">キャンセル</button>
-        <button id="done-btn" type="button" class="done-btn" disabled>完了</button>
+        <div class="action-btn">
+            <button id="cancel-btn" type="button" class="cancel-btn">キャンセル</button>
+            <button id="done-btn" type="button" class="done-btn" disabled>完了</button>
+        </div>
     </div>
 
 <script src="js/main.js"></script>
